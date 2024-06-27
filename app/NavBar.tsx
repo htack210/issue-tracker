@@ -33,7 +33,7 @@ const NavBar = () => {
               "border-2 rounded-tl-none rounded-br-none border-sky-600":
                 link.href === currentPath,
               "border-0": link.href !== currentPath,
-              "text-sky-600 hover:bg-sky-600 hover:text-sky-100 rounded-xl px-4 transition-colors font-semibold":
+              "text-myBlue hover:bg-myBlue hover:text-sky-100 rounded-xl px-4 transition-colors font-semibold":
                 true,
             })}
             href={link.href}
