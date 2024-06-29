@@ -1,4 +1,5 @@
 import "@radix-ui/themes/styles.css";
+import NextTopLoader from "nextjs-toploader";
 import "./theme-config.css";
 import "./globals.css";
 import type { Metadata } from "next";
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.variable}>
         <Theme>
+          <NextTopLoader color="#3E63DD" />
           <NavBar />
           <main className="p-5">{children}</main>
           {/* <ThemePanel /> */}
