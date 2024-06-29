@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-import toast, { Toaster } from "react-hot-toast";
 import { FaBug } from "react-icons/fa";
 import classnames from "classnames";
 
