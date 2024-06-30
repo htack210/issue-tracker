@@ -4,10 +4,10 @@ import React from "react";
 
 const statusMap: Record<
   Status,
-  { label: string; color: "red" | "orange" | "green" }
+  { label: string; color: "red" | "yellow" | "green" }
 > = {
   OPEN: { label: "Open", color: "red" },
-  IN_PROGRESS: { label: "In Progress", color: "orange" },
+  IN_PROGRESS: { label: "In Progress", color: "yellow" },
   CLOSED: { label: "Closed", color: "green" },
 };
 
