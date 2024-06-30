@@ -1,9 +1,10 @@
 import React from "react";
 import { Button, Table } from "@radix-ui/themes";
-import { GenericButton } from "../components/ButtonSettings";
+import { LinkButton } from "../components/ButtonSettings";
 import Link from "next/link";
 import prisma from "@/prisma/client";
 import IssueStatusBadge from "../components/IssueStatusBadge";
+import { ButtonTheme } from "@/app/components/ButtonSettings";
 
 const IssuesPage = async () => {
   const issues = await prisma.issue.findMany();
@@ -11,10 +12,10 @@ const IssuesPage = async () => {
   return (
     <div>
       <div className="mb-5">
-        {/* <button className={themeButton}>
+        <button className={ButtonTheme()}>
           <Link href="/issues/new">New Issue</Link>
-        </button> */}
-        {GenericButton(null, <Link href="/issues/new">New Issue</Link>)}
+        </button>
+        {/* {LinkButton(<Link href="/issues/new">New Issue</Link>)} */}
       </div>
       <Table.Root variant="surface">
         <Table.Header>

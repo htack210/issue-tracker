@@ -11,13 +11,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { createIssueSchema } from "@/app/validationSchemas";
 import { z } from "zod";
 import ErrorMessage from "@/app/components/ErrorMessage";
-import { ThemeButton } from "@/app/components/ButtonSettings";
-import { GenericButton } from "../../components/ButtonSettings";
+import { ButtonTheme } from "@/app/components/ButtonSettings";
 import Spinner from "@/app/components/Spinner";
 
 type IssueForm = z.infer<typeof createIssueSchema>;
 
-const themeButton = ThemeButton();
 const NewIssuePage = () => {
   const router = useRouter();
   const {
@@ -64,12 +62,10 @@ const NewIssuePage = () => {
         />
 
         <ErrorMessage>{errors.description?.message}</ErrorMessage>
-        {/* <button className={themeButton} disabled={isSubmitting}>
+        <button className={ButtonTheme()} disabled={isSubmitting}>
           Submit New Issue
           {isSubmitting && <Spinner />}
-        </button> */}
-        {GenericButton(`disabled={isSubmitting}`, `Submit New Issue`)}
-        {isSubmitting && <Spinner />}
+        </button>
       </form>
     </div>
   );
