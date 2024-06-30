@@ -12,6 +12,7 @@ import { createIssueSchema } from "@/app/validationSchemas";
 import { z } from "zod";
 import ErrorMessage from "@/app/components/ErrorMessage";
 import { ThemeButton } from "@/app/components/ButtonSettings";
+import { GenericButton } from "../../components/ButtonSettings";
 import Spinner from "@/app/components/Spinner";
 
 type IssueForm = z.infer<typeof createIssueSchema>;
@@ -63,10 +64,12 @@ const NewIssuePage = () => {
         />
 
         <ErrorMessage>{errors.description?.message}</ErrorMessage>
-        <button className={themeButton} disabled={isSubmitting}>
+        {/* <button className={themeButton} disabled={isSubmitting}>
           Submit New Issue
           {isSubmitting && <Spinner />}
-        </button>
+        </button> */}
+        {GenericButton(`disabled={isSubmitting}`, `Submit New Issue`)}
+        {isSubmitting && <Spinner />}
       </form>
     </div>
   );

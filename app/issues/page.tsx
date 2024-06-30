@@ -1,21 +1,20 @@
 import React from "react";
 import { Button, Table } from "@radix-ui/themes";
-import { ThemeButton } from "../components/ButtonSettings";
+import { GenericButton } from "../components/ButtonSettings";
 import Link from "next/link";
 import prisma from "@/prisma/client";
 import IssueStatusBadge from "../components/IssueStatusBadge";
 
 const IssuesPage = async () => {
-  const themeButton = ThemeButton();
   const issues = await prisma.issue.findMany();
 
   return (
     <div>
       <div className="mb-5">
-        <button className={themeButton}>
-          {/* "bg-sky-500 rounded-lg hover:bg-sky-700 text-white px-2"> */}
+        {/* <button className={themeButton}>
           <Link href="/issues/new">New Issue</Link>
-        </button>
+        </button> */}
+        {GenericButton(null, <Link href="/issues/new">New Issue</Link>)}
       </div>
       <Table.Root variant="surface">
         <Table.Header>
