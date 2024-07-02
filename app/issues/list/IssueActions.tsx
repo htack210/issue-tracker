@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { ButtonTheme } from "../components/ButtonSettings";
+import { ButtonTheme } from "../../components/ButtonSettings";
 
 const IssueActions = () => {
   return (
@@ -8,7 +8,6 @@ const IssueActions = () => {
       <button className={ButtonTheme()}>
         <Link href="/issues/new">New Issue</Link>
       </button>
-      {/* {LinkButton(<Link href="/issues/new">New Issue</Link>)} */}
     </div>
   );
 };
