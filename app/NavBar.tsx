@@ -42,11 +42,8 @@ const NavBar = () => {
                 <li key={link.href}>
                   <Link
                     className={classnames({
-                      "border-2 rounded-tl-none rounded-br-none border-sky-600":
-                        link.href === currentPath,
-                      "border-0": link.href !== currentPath,
-                      "text-sky-500 hover:bg-sky-500 hover:text-sky-100 rounded-xl px-4 transition-colors font-semibold":
-                        true,
+                      "nav-link": link.href === currentPath,
+                      "nav-link-alt": link.href !== currentPath,
                     })}
                     href={link.href}
                   >
@@ -88,7 +85,9 @@ const NavBar = () => {
               </DropdownMenu.Root>
             )}
             {status === "unauthenticated" && (
-              <Link href="/api/auth/signin">Login</Link>
+              <Link className="nav-link-alt" href="/api/auth/signin">
+                Login
+              </Link>
             )}
           </Box>
         </Flex>
