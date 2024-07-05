@@ -14,12 +14,14 @@ export default async function Home() {
   const issueCounts = { open, inProgress, closed };
 
   return (
-    <Grid columns={{ initial: "1", md: "2" }} gap="5">
-      <Flex direction="column" gap="5">
-        <IssueSummary {...issueCounts} />
-        <IssueChart {...issueCounts} />
-      </Flex>
-      <LatestIssues />
-    </Grid>
+    <>
+      <Grid columns={{ initial: "1", md: "2" }} gap="5">
+        <Flex direction="column" gap="5">
+          <IssueSummary {...issueCounts} />
+          <IssueChart {...issueCounts} />
+        </Flex>
+        <LatestIssues />
+      </Grid>
+    </>
   );
 }
