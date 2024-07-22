@@ -48,7 +48,7 @@ const IssuesPage = async ({ searchParams }: Props) => {
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Issue tracker - Issue List",
+  title: "Issue Tracker - Issue List",
   description: "View a all project issues",
 };
 
